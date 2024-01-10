@@ -3,7 +3,7 @@ LIB = libft/libft.a
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 
 SRC = main.c utils.c parse.c swap.c rotate.c rrotate.c push.c sorts.c radix.c
 
