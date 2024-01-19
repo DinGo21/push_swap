@@ -6,7 +6,7 @@
 /*   By: disantam <disantam@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:51:47 by disantam          #+#    #+#             */
-/*   Updated: 2024/01/09 16:22:38 by disantam         ###   ########.fr       */
+/*   Updated: 2024/01/19 16:30:38 by disantam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ int	check_list(t_list *lst)
 		while (lst != NULL)
 		{
 			if (node->val == lst->val)
+			{
 				return (1);
+			}
 			lst = lst->next;
 		}
 		node = node->next;
@@ -42,7 +44,9 @@ int	issorted(t_list *lst)
 		while (lst != NULL)
 		{
 			if (node->in > lst->in)
+			{
 				return (0);
+			}
 			lst = lst->next;
 		}
 		node = node->next;
@@ -58,7 +62,9 @@ void	parse_error(char **tmp, int e)
 	{
 		i = -1;
 		while (tmp[++i])
+		{
 			free(tmp[i]);
+		}
 		free(tmp);
 	}
 	write(2, "Error\n", 6);
@@ -86,7 +92,9 @@ void	list_error(t_list **lst, char **tmp, int e)
 	{
 		i = -1;
 		while (tmp[++i])
+		{
 			free(tmp[i]);
+		}
 		free(tmp);
 	}
 	lstclean(lst);

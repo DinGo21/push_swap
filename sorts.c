@@ -6,7 +6,7 @@
 /*   By: disantam <disantam@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:33:49 by disantam          #+#    #+#             */
-/*   Updated: 2024/01/10 16:12:22 by disantam         ###   ########.fr       */
+/*   Updated: 2024/01/19 16:30:57 by disantam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ static int	get_mindistance(t_list *lst)
 	while (lst != NULL)
 	{
 		if (min->in > lst->in)
+		{
 			min = lst;
+		}
 		lst = lst->next;
 	}
 	i = 0;
